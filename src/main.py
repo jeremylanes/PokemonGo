@@ -37,3 +37,15 @@ app = FastAPI()
 @app.get("/len-pokemons")
 def len_pokemons()-> dict:
     return {"len": len(pokemons)}
+
+
+@app.get("/pokemons")
+def pokemons()-> list[Pokemon]:
+
+    response = [Pokemon(**pokemons_list[x]) for x in pokemons_list]
+    # for x in pokemons_list:
+    #     response.append(Pokemon(**pokemons_list[x]))
+
+    return response
+
+
