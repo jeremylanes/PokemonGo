@@ -33,3 +33,7 @@ class Pokemon:
 # ------ app ------
 app = FastAPI()
 
+# ------ routers ------
+@app.get("/len-pokemons")
+def len_pokemons()-> dict:
+    return {"len": len(pokemons)}
