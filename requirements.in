@@ -1,0 +1,3 @@
+pip-tools
+fastapi
+uvicorn[standard]
